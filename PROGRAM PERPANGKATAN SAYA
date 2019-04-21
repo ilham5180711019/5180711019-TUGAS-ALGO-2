@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace::std;
+float pemangkatan ( float angka,float pemangkat){
+    if (pemangkat==0)
+    {return 1;}
+    else
+        if (pemangkat<0)
+            {return 1/angka *pemangkatan(angka,pemangkat+1);}
+            else
+        return angka *pemangkatan(angka,pemangkat-1);}
+main ()
+{int ang,pang;
+cout<<"Masukan Angka     :";
+cin>>ang;
+cout<<"Masukan Pangkat   :";
+cin>>pang;
+cout<<"Hasil pemangkatan :"<<pemangkatan(ang,pang);
+}
